@@ -1,0 +1,99 @@
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background-color: rgb(22, 22, 22);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      filter: invert(1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-family: "Special Gothic Expanded One", sans-serif;
+        color: #fff;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    section.month {
+      margin-bottom: 40px;
+    }
+
+    section.month h2 {
+      background-color: #131313;
+      color: white;
+      padding: 12px;
+      font-size: 22px;
+      margin: 0;
+      position: sticky;
+      top: 60px;
+      z-index: 5;
+    }
+
+    ul.file-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+
+    ul.file-list li {
+      border-top: 1px solid #eaeaea;
+    }
+
+    ul.file-list li a {
+      display: block;
+      padding: 12px 16px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    ul.file-list li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .logo {
+        width: 60px;
+      }
+
+      section.month h2 {
+        font-size: 18px;
+      }
+
+      ul.file-list li a {
+        padding: 10px 12px;
+        font-size: 15px;
+      }
+    }
