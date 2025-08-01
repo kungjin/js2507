@@ -1,5 +1,5 @@
-let memNum = 49;
-let colNum = 6;
+let memNum = parseInt(prompt('입장객의 인원은?'));
+let colNum = parseInt(prompt('한줄에 몇명?!'))
 let rowNum;
 
 if (memNum % colNum == 0) {
