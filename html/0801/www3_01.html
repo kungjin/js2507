@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript 함수 실험 노트</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #333;
+    }
+    section {
+      background: #fff;
+      border-left: 5px solid #4CAF50;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .result {
+      font-weight: bold;
+      color: #2a8;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 JavaScript 함수 실험 정리</h1>
+
+  <section>
+    <h2>1. 기본 함수 호출</h2>
+    <pre><code>function myFunction(p1, p2) {
+  return p1 * p2;
+}</code></pre>
+    <p class="result">결과: <span id="result1"></span></p>
+  </section>
+
+  <section>
+    <h2>2. 섭씨 변환 함수</h2>
+    <pre><code>function toCelsius(f) {
+  return (5/9) * (f - 32);
+}</code></pre>
+    <p class="result">섭씨: <span id="result2"></span>°C</p>
+  </section>
+
+  <section>
+    <h2>3. 함수 표현식과 화살표 함수</h2>
+    <pre><code>let myFunction1 = function(a, b) { return a * b; }
+let myFunction2 = (a, b) => a * b;</code></pre>
+    <p class="result">표현식 결과: <span id="result3"></span></p>
+    <p class="result">화살표 함수 결과: <span id="result4"></span></p>
+  </section>
+
+  <section>
+    <h2>4. typeof 와 스코프</h2>
+    <pre><code>typeof carName (함수 밖과 안의 차이)</code></pre>
+    <p class="result">Outside: <span id="result5"></span></p>
+    <p class="result">Inside: <span id="result6"></span></p>
+  </section>
+
+  <section>
+    <h2>5. 사용자 인사 함수</h2>
+    <pre><code>function greet(name, age) {
+  return "Hello " + name + "! You are " + age + " years old.";
+}</code></pre>
+    <p class="result">greet 결과: <span id="result7"></span></p>
+  </section>
+
+  <section>
+    <h2>6. 최종 섭씨 문장 출력</h2>
+    <pre><code>"The temperature is " + toCelsius(77) + " Celsius."</code></pre>
+    <p class="result" id="result8"></p>
+  </section>
+
+  <script>
+    // 1. 기본 함수
+    function myFunction(p1, p2) {
+      return p1 * p2;
+    }
+    document.getElementById("result1").innerText = myFunction(4, 3);
+
+    // 2. 섭씨 변환 함수
+    function toCelsius(f) {
+      return (5 / 9) * (f - 32);
+    }
+    document.getElementById("result2").innerText = toCelsius(77);
+
+    // 3. 함수 표현식 / 화살표 함수
+    let myFunction1 = function(a, b) { return a * b; };
+    let myFunction2 = (a, b) => a * b;
+
+    document.getElementById("result3").innerText = myFunction1(4, 4);
+    document.getElementById("result4").innerText = myFunction2(7, 4);
+
+    // 4. typeof 비교
+    let text = typeof carName;
+    document.getElementById("result5").innerText = text;
+
+    function maFunction() {
+      let carName = "Volvo";
+      let innerText = typeof carName + " " + carName;
+      document.getElementById("result6").innerText = innerText;
+    }
+    maFunction();
+
+    // 5. 인사 함수
+    function greet(name, age) {
+      return "Hello " + name + "! You are " + age + " years old.";
+    }
+    document.getElementById("result7").innerText = greet("경진", 29);
+
+    // 6. 최종 섭씨 문장 출력
+    let finalText = "The temperature is " + toCelsius(77) + " Celsius.";
+    document.getElementById("result8").innerText = finalText;
+  </script>
+</body>
+</html>
