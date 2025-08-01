@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <title>JavaScript 함수 실험 노트</title>
@@ -10,20 +11,24 @@
       padding: 20px;
       line-height: 1.6;
     }
+
     h2 {
       color: #333;
     }
+
     section {
       background: #fff;
       border-left: 5px solid #4CAF50;
       padding: 15px 20px;
       margin-bottom: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     }
+
     .result {
       font-weight: bold;
       color: #2a8;
     }
+
     pre {
       background: #eee;
       padding: 10px;
@@ -31,6 +36,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <h1>📘 JavaScript 함수 실험 정리</h1>
@@ -70,7 +76,7 @@ let myFunction2 = (a, b) => a * b;</code></pre>
     <h2>5. 사용자 인사 함수</h2>
     <pre><code>function greet(name, age) {
   return "Hello " + name + "! You are " + age + " years old.";
-}</code></pre>
+  }</code></pre>
     <p class="result">greet 결과: <span id="result7"></span></p>
   </section>
 
@@ -94,7 +100,7 @@ let myFunction2 = (a, b) => a * b;</code></pre>
     document.getElementById("result2").innerText = toCelsius(77);
 
     // 3. 함수 표현식 / 화살표 함수
-    let myFunction1 = function(a, b) { return a * b; };
+    let myFunction1 = function (a, b) { return a * b; };
     let myFunction2 = (a, b) => a * b;
 
     document.getElementById("result3").innerText = myFunction1(4, 4);
@@ -122,4 +128,5 @@ let myFunction2 = (a, b) => a * b;</code></pre>
     document.getElementById("result8").innerText = finalText;
   </script>
 </body>
+
 </html>
