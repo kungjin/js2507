@@ -22,3 +22,5 @@ for (let i = 0; i < rowNum; i++) {
 
 }
 document.writeln(`</table>`);
+
+
