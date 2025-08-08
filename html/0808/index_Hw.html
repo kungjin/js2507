@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 예약 서비스</title>
+    <style>
+        body {
+            background-color: #f5f6fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-size: larger;
+            font-weight: 800;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .name{
+            color: blue;
+        }
+        .lm{
+            color: red;
+        }
+
+        hr{
+            border: 1px dashed rgb(202, 190, 190);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+        class Table {
+            constructor(number, capacity) {
+                this.number = number;
+                this.capacity = capacity;
+            }
+            info() {
+                return `테이블 ${this.number}<span class ="lm"> (최대 ${this.capacity}명)</span>`
+            }
+        }
+
+        class Reservation extends Table {
+            constructor(number, capacity, name, time) {
+                super(number, capacity)
+                this.name = name
+                this.time = time
+            }
+            show() {
+                return `${this.info()} → ${this.time} / 예약자: <span class ="name"> ${this.name}</span>`
+            }
+        }
+
+        const r1 = new Reservation(1, 4, "홍 길동", "18:00");
+
+        const r2 = new Reservation(2, 2, "김 철수", "19:30");
+
+        document.writeln(r1.show() + "<br>"+ "<hr>");
+        document.writeln(r2.show() + "<br>"+ "<hr>");
+
+
+    </script>
+
+</body>
+
+</html>
